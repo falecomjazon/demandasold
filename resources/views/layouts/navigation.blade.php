@@ -12,9 +12,22 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('inicio')" :active="request()->routeIs('inicio')">
+                        {{ __('Início') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('questionarios')" :active="request()->routeIs('questionarios')">
+                        {{ __('Questionários') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('acompanhamento')" :active="request()->routeIs('acompanhamento')">
+                        {{ __('Acompanhamento') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('usuarios')" :active="request()->routeIs('usuarios')">
+                        {{ __('Usuários') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('cadastro')" :active="request()->routeIs('cadastro')">
+                        {{ __('Cadastros') }}
+                    </x-nav-link>
+                    
                 </div>
             </div>
 
@@ -67,8 +80,20 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('inicio')" :active="request()->routeIs('inicio')">
+                {{ __('Início') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('questionarios')" :active="request()->routeIs('questionarios')">
+                {{ __('Questionários') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('acompanhamento')" :active="request()->routeIs('acompanhamento')">
+                {{ __('Acompanhamentos') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('familias')" :active="request()->routeIs('familias')">
+                {{ __('Famílias') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('usuarios')" :active="request()->routeIs('usuarios')">
+                {{ __('Usuários') }}
             </x-responsive-nav-link>
         </div>
 
